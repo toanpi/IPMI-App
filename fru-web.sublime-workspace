@@ -1,0 +1,597 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"se",
+				"seek\tfunction"
+			],
+			[
+				"fi",
+				"filename"
+			],
+			[
+				"up",
+				"upload_file\tstatement"
+			],
+			[
+				"fil",
+				"filename\tstatement"
+			],
+			[
+				"uploaded",
+				"uploaded_file\tfunction"
+			],
+			[
+				"spl",
+				"split"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"err",
+				"err\tstatement"
+			],
+			[
+				"sc",
+				"scp_server\tstatement"
+			],
+			[
+				"product_in",
+				"product_info_include"
+			],
+			[
+				"t",
+				"tbody\tTag"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"pro",
+				"product_asset_tag"
+			],
+			[
+				"pr",
+				"product_serial_number"
+			],
+			[
+				"as",
+				"asset_tag\tstatement"
+			],
+			[
+				"chas",
+				"chassis_type_offset"
+			],
+			[
+				"chass",
+				"chassis_part_num\tstatement"
+			],
+			[
+				"cha",
+				"chassis_info_area\tstatement"
+			],
+			[
+				"boa",
+				"board_area\tstatement"
+			],
+			[
+				"fo",
+				"format_ipmi_board_info\tfunction"
+			],
+			[
+				"bao",
+				"board_area\tstatement"
+			],
+			[
+				"dat",
+				"date_format\tstatement"
+			],
+			[
+				"get",
+				"get_days\tfunction"
+			],
+			[
+				"self",
+				"self"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"is",
+				"is_included"
+			],
+			[
+				"ma",
+				"manufacturer_name"
+			],
+			[
+				"def",
+				"def\tFunction"
+			],
+			[
+				"fa",
+				"false"
+			],
+			[
+				"int",
+				"int_zero_checksum\tfunction"
+			],
+			[
+				"f",
+				"false"
+			],
+			[
+				"Genar",
+				"Generate"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "welcome.py",
+			"settings":
+			{
+				"buffer_size": 23800,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/fru_25_3_17.html",
+			"settings":
+			{
+				"buffer_size": 16719,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/gen_result_24_3_17.html",
+			"settings":
+			{
+				"buffer_size": 8343,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"en",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insat",
+				"Package Control: Install Package"
+			],
+			[
+				"dia",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"En",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"di",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"ena",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 371.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/X/Skylark/fru_ipmi_web/webpython",
+		"/X/Skylark/fru_ipmi_web/webpython/static"
+	],
+	"file_history":
+	[
+		"/C/Users/thuynh/Desktop/test.txt",
+		"/X/Skylark/fru_ipmi_web/webpython_run2/static/fru_25_3_17.html",
+		"/X/Skylark/fru_ipmi_web/webpython_run2/welcome.py",
+		"/X/Skylark/fru_ipmi_web/webpython/osprey-fru-eeprom-2017-03-27.bin",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/User/hex_viewer.sublime-settings",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/HexViewer/hex_viewer.sublime-settings",
+		"/X/Skylark/fru_ipmi_web/webpython/merlin_bmc_fru_eeprom_init_v3.bin",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/X/Skylark/fru_ipmi_web/webpython/static/fru_24_3_17.html",
+		"/C/Working/Project/skylark/FRU Eeprom board info/fru_ipmi_web/webpython/templates/gen_result_24_3_17.html",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/C/Working/Project/skylark/FRU Eeprom board info/fru_ipmi_web/webpython/static/fru_24_3_17.html",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/User/chrome.sublime-build",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Working/Project/skylark/FRU Eeprom board info/fru_ipmi_web/webpython/merlin_bmc_fru_eeprom_init_v3.bin",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/Python Flake8 Lint/Flake8Lint.sublime-settings",
+		"/C/Working/Project/skylark/FRU Eeprom board info/fru_ipmi_web/webpython/welcome.py",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Default (Windows).sublime-keymap",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/C/Users/thuynh/AppData/Roaming/Sublime Text 3/Packages/User/Python.sublime-settings",
+		"/X/Skylark/fru_ipmi_web/webpython/welcome.py",
+		"/X/Skylark/fru_ipmi_web/webpython/static/hello.py",
+		"/X/Skylark/fru_ipmi_web/webpython/osprey-fru-eeprom-2017-03-24.bin",
+		"/X/Skylark/fru_ipmi_web/webpython/manifest.yml",
+		"/C/Working/Project/skylark/FRU Eeprom board info/fru_21_3_17.html",
+		"/C/Working/Project/skylark/FRU Eeprom board info/fru_ipmi_web/bakups/webpython_24_3/static/fru_20_3_17.html",
+		"/C/Program Files/Sublime Text 3/changelog.txt"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"TheFileName",
+			"TheName",
+			"theDate",
+			"check",
+			"wri_fru",
+			"pri_fru",
+			"wri_fru",
+			"[]\n",
+			"product_info_include",
+			"chassis_info_include",
+			"board",
+			"always_prompt_for_file_reload",
+			"board",
+			"board_area",
+			"board",
+			"product_info_include",
+			"manufacturer_name",
+			"dump_server_info",
+			"error",
+			"board",
+			"pep8",
+			"anaconda_linter_phantoms ",
+			"0.",
+			"pep8",
+			"true",
+			"anaconda_linter_phantoms ",
+			"enable_signatures_tooltip",
+			"enable_signatures_tooltip ",
+			" ,"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"product",
+			"chassis",
+			"board_area_data",
+			"self",
+			"se",
+			"self",
+			"data"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "welcome.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23800,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23049,
+								23049
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2365.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "static/fru_25_3_17.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16719,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12187,
+								12194
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7401.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "templates/gen_result_24_3_17.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8343,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7631,
+								7631
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6489.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.653968253968,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.anaconda_documentation":
+	{
+		"height": 124.0
+	},
+	"output.autopep8":
+	{
+		"height": 124.0
+	},
+	"output.exec":
+	{
+		"height": 52.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 157.0
+	},
+	"pinned_build_system": "",
+	"project": "fru-web.sublime-project",
+	"replace":
+	{
+		"height": 102.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 234.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

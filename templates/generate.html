@@ -1,0 +1,226 @@
+
+
+{% extends "ground.html" %}
+<!-- {% block title %}Index{% endblock %} -->
+{% block head %}
+  {{ super() }}
+<link rel="stylesheet" href="static/stylesheets/generate.css?q={{today}}">
+{% endblock %}
+{% block content %}
+
+<form action="/upload" method="post" id="upload" enctype="multipart/form-data">
+   <h2 onclick="hide_parse_file_info()">Parse Fru Epprom File</h2>
+   <div style="display: block;" id="total_body_parse_file" >
+   <table style="width:100%" >
+      <col width="300">
+      <col width="0">
+      <tr>
+         <td>Fru Eeprom File</td>
+         <td><input type="file" name="file"></td>
+      </tr>
+    </table>
+        <br></br>
+        <button type="submit" form="upload">Parse</button>    
+        <br></br>
+     </div>
+        <!-- <br></br> -->
+</form>
+<form method="POST"  action="/generate" onsubmit="return validate_generate()">
+<h2 onclick="hide_chassis_info()">Chassis Information Area</h2>
+
+<div style="display: block;" id="total_body_chassis_info" bordercolor="red">
+   <table style="width:100%" >
+      <col width="300">
+      <col width="0">
+      <caption></caption>
+      <tr>
+         <td>Include Chassis Info</td>
+         <td>
+         <input type="checkbox"  class="include_checkbox" name="chassis_info_include_switch" onchange="yesnoSelectChassisInfo(this);" value="chassis_info_include" id="chassis_info" checked=""  class="checkbox_input">
+         </td>
+      </tr>
+    <tbody  style="display: ;" id="if_include_chassis_info">
+         <tr >
+            <td>Chassis Type</td>
+            <td><input type="number" name="chassis_type" min="0" max="255" placeholder="Ex: 1" value="{{chassis_type}}" required="" id="chassis_type"></td>
+         </tr>
+         <tr>
+            <td>Chassis Part Number</td>
+            <td><input placeholder="Ex: EV-883408-X2-MXB-1" type="text" value="{{chassis_part_number}}" required="" name="chassis_part_number"  id="chassis_part_number"  pattern=".{0,25}" title="Max lenght is 25" maxlength="25"></td>
+         </tr>
+         <tr>
+            <td>Chassis Serial Number</td>
+            <td><input placeholder="Ex: SQCA-C000xx" type="text" value="{{chassis_serial_number}}" required="" name="chassis_serial_number" maxlength="25" id="chassis_serial_number" pattern=".{0,25}" title="Max lenght is 25"></td>
+         </tr>
+     </tbody>
+   </table>
+</div>
+<h2 onclick="hide_board_info()">Board Information Area</h2>
+<!--    <br></br> -->
+<div style="display: block;" id="total_body_board_info">
+   <table style="width:100%">
+      <col width="300">
+      <col width="0">
+      <caption></caption>
+      <tbody style="display: none;">
+      <tr >
+         <td>Board Area Format Version</td>
+         <td><input type="number" name="board_area_ver" min="1" max="255" placeholder="Ex: 1" value="{{board_area_ver}}" required=""></td>
+      </tr>
+      </tbody>
+      <tr>
+         <td>Mfg. Date / Time</td>
+         <td><input placeholder="Ex: 03/20/2017" type="date" value="{{date}}" required="" id="date" name="date" autocomplete='off' onchange="check();" onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"></td>
+      </tr>
+      <tr>
+         <td>Manufacturer Name</td>
+         <td><input placeholder="Ex: AppliedMicro (R)" type="text" value="{{mfg_name}}" required="" name="mfg_name" maxlength="25" pattern=".{0,25}" title="Max lenght is 25"></td>
+      </tr>
+      <tr>
+         <td>Product Name</td>
+         <td><input placeholder="Ex:OSPREY" type="text" value="{{product_name}}" required="" name="product_name" id="board_product_name" autocomplete='off' onchange="check();" onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" maxlength="25" pattern=".{0,25}" title="Max lenght is 25"></td>
+      </tr>
+      <tr>
+         <td>Serial Number</td>
+         <td> <input placeholder="Ex:A0-014" type="text" value="{{serial_number}}" required="" name="serial_number" maxlength="25" id="serial_number" onchange="check();" onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" pattern=".{0,25}" title="Max lenght is 25"></td>
+      </tr>
+      <tr>
+         <td>Part Number</td>
+         <td> <input placeholder="Ex: A0-014" type="text" value="{{part_number}}" required="" name="part_number" maxlength="25" pattern=".{0,25}" title="Max lenght is 25"></td>
+      </tr>
+      <tr>
+         <td>FRU File ID</td>
+         <td><input placeholder="Ex: 0" type="text" value="{{fru_file_id}}" name="fru_file_id" maxlength="25" pattern=".{0,25}" title="Max lenght is 25"></td>
+      </tr>
+   </table>
+</div>
+  
+<h2 onclick="hide_product_info()">Product Information Area</h2>
+<!--    <br></br> -->
+<div style="display: block;" id="total_body_product_info">
+   <table style="width:100%">
+      <col width="300">
+      <col width="0">
+      <caption></caption>
+      <tr>
+         <td>Include Product Info</td>
+         <td>
+         <input type="checkbox"  class="include_checkbox" name="product_info_include_switch" onchange="yesnoSelectProductInfo(this);" value="product_info_include" id="product_info"  checked="">
+         </td>
+      </tr>
+      <tbody style="display:;" id="if_include_product_info">
+         <tr>
+            <td>Manufacturer Name</td>
+            <td><input placeholder="Ex: AppliedMicro (R)" type="text" value="{{product_mfg_name}}" required="" name="product_mfg_name" maxlength="25" id="product_mfg_name" pattern=".{0,25}" title="Max lenght is 25"></td>
+         </tr>
+         <tr>
+            <td>Product Name</td>
+            <td><input placeholder="Ex: OSPREY" type="text" value="{{produc_product_name}}" required="" name="produc_product_name" maxlength="25" id="produc_product_name" pattern=".{0,25}" title="Max lenght is 25"></td>
+         </tr>
+         <tr>
+            <td>Product Part Number</td>
+            <td><input placeholder="Ex: EV-883408-X2-MXB-1" type="text" value="{{product_part_number}}" required="" name="product_part_number" maxlength="25" id="product_part_number" pattern=".{0,25}" title="Max lenght is 25"></td>
+         </tr>
+         <tr>
+            <td>Product Version</td>
+            <td><input placeholder="Ex: V1.0" type="text" required="" value="{{product_product_ver}}" name="product_product_ver" maxlength="25" id="product_product_ver" pattern=".{0,25}" title="Max lenght is 25"></td>
+         </tr>
+         <tr>
+            <td>Product Serial Number</td>
+            <td><input placeholder="Ex: SQCA-C000xx" type="text" required="" value="{{product_serial_number}}" name="product_serial_number" maxlength="25" id="product_serial_number" pattern=".{0,25}" title="Max lenght is 25"></td>
+         </tr>
+         <tr>
+            <td>Asset Tag</td>
+            <td><input placeholder="Ex: SQCA-C000xx" type="text" required="" value="{{product_asset_tag}}" name="product_asset_tag" maxlength="25" id="product_asset_tag" pattern=".{0,25}" title="Max lenght is 25"></td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+
+<h2 onclick="hide_file_info()" >File Information</h2>
+<!--    <br></br> -->
+<div style="display: block;" id="total_body_file_info">
+   <table style="width:100%">
+      <col width="300">
+      <col width="0">
+      <tr>
+         <td>File Name</td>
+         <td><input placeholder="Ex: osprey-fru-eeprom-24-03-17.bin" type="text" value="{{file_name}}" required="" name="file_name" id="TheFileName"></td>
+      </tr>
+      <tbody style="display: none">
+      <tr>
+         <td>Send To Server</td>
+         <td>
+            <select name="scp_switch" onchange="yesnoSelectScp(this);" id="scp">
+               <option value="scp_en">Enable</option>
+               <option value="scp_dis" selected >Disable</option>
+            </select>
+         </td>
+      </tr>
+      <tbody style="display: none;" id="if_scp_en">
+         <tr>
+            <td><li>User</li></td>
+            <td><input placeholder="Ex: amcclab" type="text" required="" value="amcclab" name="user"></td>
+         </tr>
+         <tr>
+            <td><li>Password</li></td>
+            <td><input placeholder="" type="password" required="" value="amcc1234" name="password"></td>
+         </tr>
+         <tr>
+            <td><li>Server IP</li></td>
+            <td><input placeholder="Ex: 10.76.176.193" type="text" required="" value="10.76.176.193" required pattern="((^|\.)((25[0-5])|(2[0-4]\d)|(1\d\d)|([1-9]?\d))){4}$" name="serverip"></td>
+         </tr>
+         <tr>
+            <td><li>Path</li></td>
+            <td> <input placeholder="Ex: tftpboot/eagle/fru" type="text" required="" value="/tftpboot/eagle/fru" name="path"></td>
+         </tr>
+          </tbody>
+          </tbody>
+          <tr>
+         <td>Write To Fru Epprom</td>
+         <td>
+            <select name="write_fru_switch" onchange="yesnoSelectWriteFru(this);" id="write_fru">
+               <option value="write_fru_en">Enable</option>
+               <option value="write_fru_dis"  >Disable</option>
+            </select>
+         </td>
+      </tr>
+      <tbody style="display: ;" id="if_write_fru_en">
+         <tr>
+            <td><li>BMC IP</li></td>
+            <td><input placeholder="Ex: 10.38.15.172" type="text" required="" value="10.38.15.172" required pattern="((^|\.)((25[0-5])|(2[0-4]\d)|(1\d\d)|([1-9]?\d))){4}$" name="bmc_serverip"></td>
+         </tr>
+        </tbody>
+   
+   </table>
+   </div>
+   <br></br>
+   <button type="submit" >Generate</button>
+   <br></br>
+   <br>
+</form>
+<script type="text/javascript" src="{{ url_for('static', filename = 'javascript/generate.js') }}" ></script>
+<script type="text/javascript">
+   function validate_generate (){
+      var length_number = 4;
+      serial_number = document.getElementById('serial_number').value ;
+      // alert(serial_number);
+      // for (i=0;i<length_number;i++){
+
+      //    number = parseInt(serial_number.slice( serial_number.length-i-1,serial_number.length - i)) ;
+      //    // alert(number);
+
+      //    if(isNaN(number)) {
+      //    alert("Make sure the 4 last character of serial number is numbers!");
+      //    return false;
+      //    }
+
+      // }
+      return true;
+
+      }
+      
+
+</script>
+{% endblock %}

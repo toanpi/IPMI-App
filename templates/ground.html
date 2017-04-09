@@ -1,0 +1,52 @@
+
+<!DOCTYPE html><html class=''>
+<head>
+<title>IPMI Generator</title>
+ <meta charset="UTF-8">
+<link rel="stylesheet" href="static/stylesheets/main.css?q=1280549780">
+{% block head %} {% endblock %}
+</head>
+<body>
+<div>
+<div id="mainnav" >
+  <ul>
+    <li class="thefirst"><a href="/fru">Generate</a>
+      <ul class="sub-menu">
+        <!-- <li><a href="#">XXX</a></li>
+        <li><a href="#">XXX</a></li> -->
+        </li>
+      </ul>
+    </li>
+    <li><a href="/bmc">BMC</a>
+      <ul class="sub-menu">
+        <!-- <li><a href="/bmc#ping">Ping BMC</a></li>
+        <li><a href="/bmc#write_fru">Read Fru Epprom</a></li>
+        <li><a href="/bmc#print_fru">Print Fru Eeprom</a></li> -->
+        </li>
+      </ul>
+    </li>
+    <li><a href="#">Help</a>
+    <ul class="sub-menu">
+        <!-- <li><a href="#">User Guide</a></li> -->
+        <li><a href="/ipmi_spec">IPMI Specification</a></li>
+        <li><a href="/about">About</a></li>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div id="form_data">
+<form >
+   <h1>FRU EEPROM GENERATOR {{version}}</h1>
+<br></br>
+</form>
+<!-- Content -->
+{% block content %} 
+{% endblock %}
+
+
+<!-- Finish -->
+</div>
+</div>
+</body>
+</html>

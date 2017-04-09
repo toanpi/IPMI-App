@@ -1,0 +1,20 @@
+
+{% extends "ground.html" %}
+<!-- {% block title %}Index{% endblock %} -->
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+<form method="post">
+<h2 >Warning</h2>
+<br>
+<p>{{diag_message}} </p>
+<br>
+<br>
+<button formaction="/fru">Back</button>
+<div style="height: 300px"></div>
+</form> 
+
+</script>
+{% endblock %}
